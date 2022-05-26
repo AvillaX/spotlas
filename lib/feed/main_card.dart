@@ -24,36 +24,9 @@ class MainCard extends StatefulWidget {
 class _MainCardState extends State<MainCard> {
   @override
   Widget build(BuildContext context) {
-    // return SizedBox(
-    //   child: ListTile(
-    //     horizontalTitleGap: 20,
-    //     leading: CircleAvatar(
-    //       //radius: 55,
-    //       backgroundColor: widget.color,
-    //       child: CircleAvatar(
-    //         radius: 150,
-    //         backgroundImage: AssetImage(widget.image),
-    //       ),
-    //     ),
-    //     title: Text(
-    //       widget.title,
-    //       style: const TextStyle(color: Colors.white, fontSize: 20),
-    //     ),
-    //     subtitle: Text(
-    //       widget.subtitle,
-    //       style: TextStyle(
-    //           color: Colors.white.withOpacity(0.65),
-    //           fontWeight: FontWeight.bold),
-    //     ),
-    //     trailing: IconButton(
-    //       icon: widget.icon,
-    //       onPressed: widget.fav,
-    //     ),
-    //   ),
-    // );
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
+      children: [
         CircleAvatar(
           radius: 35,
           backgroundColor: widget.color,
@@ -82,6 +55,13 @@ class _MainCardState extends State<MainCard> {
                 ),
               ],
             ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(right: 8.0),
+          child: IconButton(
+            icon: widget.icon,
+            onPressed: widget.fav,
           ),
         ),
       ],

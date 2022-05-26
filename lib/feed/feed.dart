@@ -98,13 +98,14 @@ class _FeedState extends State<Feed> {
               child: RichText(
                 text: TextSpan(
                   text: '${widget.user}  ',
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black),
                   children: [
                     TextSpan(
                         text: (secondPart == "")
                             ? firstPart
                             : (more)
-                                ? ('$firstPart... ')
+                                ? ('$firstPart ')
                                 : (firstPart + secondPart),
                         style: const TextStyle(fontWeight: FontWeight.normal)),
                     TextSpan(
